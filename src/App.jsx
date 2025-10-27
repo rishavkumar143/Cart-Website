@@ -1,22 +1,23 @@
-import './App.css';
-import Footer from './Footer';
-import Section from './Section';
+import { Link } from 'react-router-dom'
+import './App.css'
+import Footer from './Footer'
+import Section from './Section'
 
-function App(){
-  return(
+function App() {
+  return (
     <>
-    <div className='Header'>
-      <h1>Cart<span> WebPage</span></h1>
-      <ul type="none">
-        <li>Privacy</li>
-        <li>Contact</li>
-        <li>Help</li>
-      </ul>
-      
-    </div>
-    <Section />
-    <Footer />
+      <div className='Head'>
+        <h1>Cart<span> WebPage</span></h1>
+        <ul type="none">
+          <li><Link to="/privacy">Privacy</Link></li>
+          <li><Link to="/contact">Contact</Link></li> 
+          <li><Link to="/help">Help</Link></li>
+        </ul>
+      </div>
+      <Section />
+      <Footer />
     </>
   )
 }
-export default App;
+
+export default App
