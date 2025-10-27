@@ -6,10 +6,10 @@ const Privacy = () => {
       <h1>Privacy Policy</h1>
 
       <p>
-        Welcome to <strong>Cart Website</strong>. Your privacy is very
-        important to us. This Privacy Policy explains how we collect, use, and
-        protect your personal information when you visit or make a purchase from
-        our website.
+        Welcome to <strong>Cart Website</strong>. Your privacy is very important
+        to us. This Privacy Policy explains how we collect, use, and protect
+        your personal information when you visit or make a purchase from our
+        website.
       </p>
 
       <h2>1. Information We Collect</h2>
@@ -45,7 +45,8 @@ const Privacy = () => {
       <h2>5. Cookies</h2>
       <p>
         We use cookies to improve your browsing experience and analyze site
-        traffic. You can choose to disable cookies through your browser settings.
+        traffic. You can choose to disable cookies through your browser
+        settings.
       </p>
 
       <h2>6. Your Rights</h2>
