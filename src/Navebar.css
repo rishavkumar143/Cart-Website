@@ -5,13 +5,10 @@
 }
 
 .Nave {
-  /* height: 12vh; */
   background-color: darkslategray;
   width: 100%;
   padding: 0.3rem 0;
-  /* position: sticky; */
   top: 0;
-  /* z-index: 1000; */
 }
 
 .Nave ul {
@@ -30,13 +27,11 @@
 .Nave ul li {
   padding: 8px 1rem;
   cursor: pointer;
-  /* transition: all 0.3s ease; */
   border-radius: 8px;
 }
 
 .Nave ul li:hover {
   background-color: rgba(255, 255, 255, 0.15);
-  /* border: px solid rgba(255, 255, 255, 0.2); */
 }
 
 

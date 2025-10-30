@@ -41,7 +41,7 @@ function Login() {
     if (input !== '' && input2 !== '') {
       if (userFound) {
         setinvalid(false);
-        Navigate('/App'); // redirect to your next page
+        Navigate('/App');
       } else {
         setinvalid(true);
         setTimeout(() => setinvalid(false), 2000);

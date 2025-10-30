@@ -1,55 +1,5 @@
-// import { useNavigate } from "react-router-dom";
-// import "./Navebar.css";
-
-// function Navebar() {
-    
-//   const navigate = useNavigate();
-//   const handleKitchenClick = () => {
-//     navigate("/Home");
-//   };
-//   const handelElectronicsClick=()=>{
-//     navigate("/Electronics") 
-//   }
-//   const handelMenClick=()=>{
-//     navigate("/MenClothing")
-//   };
-//   const handelWomenClick=()=>{
-//     navigate("/Women")
-//   }
-//   const handelJeweleryClick=()=>{
-//     navigate("/Jewelery")
-//   }
-
-//   return (
-//     <div className="Nave">
-//       <ul type="none">
-//         <li>☰ All</li>
-//         {/* <li>Fresh ▾</li> */}
-//         {/* <li>MX Player</li> */}
-//         {/* <li>Sell</li> */}
-//         {/* <li>Bestsellers</li> */}
-//         {/* <li>Today's Deals</li> */}
-//         <li>Mobiles</li> 
-//         <li>New release</li>
-//         <li onClick={handelElectronicsClick}>Electronics</li>
-//         {/* <li>Customer Service</li> */}
-//         <li onClick={handleKitchenClick
-//         } className="nav-link">Home & Kitchen</li>       
-//         {/* <li>Prime ▾</li> */}
-//         <li>Fashion</li>
-//         {/* <li>Amazone Pay</li> */}
-//         <li onClick={handelJeweleryClick}>Jewelery</li>
-//         <li onClick={handelWomenClick}>Women's Clothing</li>
-//         <li onClick={handelMenClick}>Men's Clothing</li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default Navebar;
-
 import "./Navebar.css";
-
+ 
 function Navebar({ onCategorySelect }) {
   return (
     <div className="Nave">
