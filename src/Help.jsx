@@ -51,7 +51,7 @@ const Help = () => {
           📧 Email us at: <strong>cartwebsite123@email.com</strong>
         </p>
         <p>
-          ☎️ Call us at: <strong>+91 7409824884</strong>
+          ☎️ Call us at: <strong>+91 7409824***</strong>
         </p>
         <p>
           💬 Live Chat: Available from <strong>4:00 PM - 12:00 AM</strong> (Mon-Fri)

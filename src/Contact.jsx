@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
@@ -31,7 +31,7 @@ const Contact = () => {
         <div className="contact-info">
           <h2>📞 Get in Touch</h2>
           <p><strong>Email:</strong> support@cartwebpage.com</p>
-          <p><strong>Phone:</strong> +91 74098-24884</p>
+          <p><strong>Phone:</strong> +91 74098-24***</p>
           <p><strong>Address:</strong> 6th floor, Steller It Park, Noida 62, India</p>
           <p><strong>Working Hours:</strong> Mon - Fri, 4:00 PM - 12:00 AM</p>
         </div>

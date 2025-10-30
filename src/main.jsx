@@ -1,36 +1,37 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {createBrowserRouter,RouterProvider} from "react-router-dom"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./Login.jsx";
-import App from './App.jsx'
+import App from './App.jsx';
 import Privacy from './Privacy.jsx';
-import Conatct from './Contact.jsx';
+import Contact from './Contact.jsx';
 import Help from './Help.jsx';
 
-let approute= createBrowserRouter([
+const approute = createBrowserRouter([
   {
-    path:"/App",
-    element:<App/>
+    path: "/app",
+    element: <App />
   },
   {
-    path:"/",
-    element:<Login/>
+    path: "/",
+    element: <Login />
   },
   {
-    path:"/Privacy",
-    element:<Privacy/>
+    path: "/privacy",
+    element: <Privacy />
   },
   {
-    path:"/Contact",
-    element:<Conatct/>
+    path: "/contact",
+    element: <Contact />
   },
   {
-    path:"/Help",
-    element:<Help/>
-  },
-])
+    path: "/help",
+    element: <Help />
+  }
+]);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-<RouterProvider router={approute}>
-  <App/>
-</RouterProvider>
-)
+  <React.StrictMode>
+    <RouterProvider router={approute} />
+  </React.StrictMode>
+);

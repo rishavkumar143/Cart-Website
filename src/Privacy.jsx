@@ -1,5 +1,6 @@
 import "./Privacy.css";
 
+
 const Privacy = () => {
   return (
     <div className="privacy-policy">
