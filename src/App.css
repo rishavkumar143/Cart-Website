@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* ---------- HEADER CONTAINER ---------- */
 .Head {
   height: 8vh;
   width: 100%;
@@ -13,10 +12,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 4%;
-  flex-wrap: wrap; /* allows items to wrap on smaller screens */
+  flex-wrap: wrap; 
 }
 
-/* ---------- LOGO ---------- */
 .Head h1 {
   color: red;
   font-size: 1.8rem;
@@ -27,7 +25,6 @@
   color: white;
 }
 
-/* ---------- NAV LINKS ---------- */
 .Head ul {
   display: flex;
   list-style: none;
@@ -47,7 +44,7 @@
   color: white;
 }
 
-/* ---------- CART & PROFILE ICONS ---------- */
+
 .cart-profile {
   display: flex;
   gap: 25px;
@@ -56,11 +53,6 @@
   align-items: center;
 }
 
-/* ---------- SEARCH BOX ---------- */
-
-/* ---------- RESPONSIVE DESIGN ---------- */
-
-/* Tablets (width <= 1024px) */
 @media (max-width: 1024px) {
   .Head ul {
     gap: 1.5rem;
@@ -71,7 +63,7 @@
   }
 }
 
-/* Mobile (width <= 768px) */
+
 @media (max-width: 768px) {
   .Head {
     flex-direction: column;
@@ -104,7 +96,6 @@
   }
 }
 
-/* Small Mobile (width <= 480px) */
 @media (max-width: 480px) {
   .Head {
     padding: 8px 4%;
