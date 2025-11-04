@@ -9,15 +9,7 @@ function Section({ selectedCategory }) {
   useEffect(() => {
     setLoading(true);
 
-    let url = "https://dummyjson.com/products";
-
-    if (selectedCategory && selectedCategory !== "all") {
-      url = `https://dummyjson.com/products/category/${selectedCategory}`;
-    } else {
-      url = "https://dummyjson.com/products?limit=100";
-    }
-
-    fetch(url)
+    fetch("https://dummyjson.com/products?limit=194")
       .then((res) => res.json())
       .then((result) => {
         setData(result.products || []);
@@ -27,18 +19,27 @@ function Section({ selectedCategory }) {
         console.error("Error fetching data:", err);
         setLoading(false);
       });
-  }, [selectedCategory]);
+  }, []); 
 
   if (loading) {
     return <h2 className="loading">Loading...</h2>;
   }
 
+
+  const filteredData = data
+    .filter((item) =>
+      selectedCategory === "all" || !selectedCategory
+        ? true
+        : item.category === selectedCategory
+    ) 
+    .sort((a, b) => a.price - b.price); 
+
   return (
     <div className="main-box">
-      {data.length === 0 ? (
+      {filteredData.length === 0 ? (
         <p>No products found for this category.</p>
       ) : (
-        data.map((item) => (
+        filteredData.map((item) => (
           <div className="box" key={item.id}>
             <img src={item.thumbnail} alt={item.title} />
 

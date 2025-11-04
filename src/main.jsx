@@ -6,6 +6,7 @@ import App from './App.jsx';
 import Privacy from './Privacy.jsx';
 import Contact from './Contact.jsx';
 import Help from './Help.jsx';
+import Signup from './Signup.jsx';
 
 const approute = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const approute = createBrowserRouter([
   {
     path: "/help",
     element: <Help />
+  },
+  {
+    path:"/Signup",
+    element:<Signup/>
   }
 ]);
 

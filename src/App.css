@@ -1,8 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ---------- HEADER CONTAINER ---------- */
 .Head {
   height: 8vh;
   width: 100%;
@@ -11,34 +13,112 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 4%;
-} 
+  flex-wrap: wrap; /* allows items to wrap on smaller screens */
+}
+
+/* ---------- LOGO ---------- */
 .Head h1 {
   color: red;
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .Head h1 span {
   color: white;
 }
+
+/* ---------- NAV LINKS ---------- */
 .Head ul {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
 }
-.Head ul li a{
+
+.Head ul li a {
   color: chocolate;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: color 0.3s ease;
   text-decoration: none;
 }
-.Head ul li:hover {
+
+.Head ul li:hover a {
   color: white;
 }
-.cart-profile{
+
+/* ---------- CART & PROFILE ICONS ---------- */
+.cart-profile {
   display: flex;
-  gap:25px;
-  font-size:30px;
-  color:white;
+  gap: 25px;
+  font-size: 1.8rem;
+  color: white;
+  align-items: center;
+}
+
+/* ---------- SEARCH BOX ---------- */
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+  .Head ul {
+    gap: 1.5rem;
+  }
+
+  .Head h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile (width <= 768px) */
+@media (max-width: 768px) {
+  .Head {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+    height: auto;
+  }
+
+  .Head h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .Head ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .Head ul li a {
+    font-size: 1rem;
+  }
+
+
+  .cart-profile {
+    gap: 15px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+}
+
+/* Small Mobile (width <= 480px) */
+@media (max-width: 480px) {
+  .Head {
+    padding: 8px 4%;
+  }
+
+  .Head h1 {
+    font-size: 1.4rem;
+  }
+
+  .Head ul li a {
+    font-size: 0.95rem;
+  }
+
+  .cart-profile {
+    font-size: 1.2rem;
+  }
 }

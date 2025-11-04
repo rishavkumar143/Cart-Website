@@ -48,6 +48,10 @@ function Login() {
       }
     }
   };
+  const navigate=useNavigate();
+    const handleSignupClick=()=>{
+      navigate("/Signup");
+    }
 
   return (
     <div className='main'>
@@ -78,9 +82,12 @@ function Login() {
         <div className='btn-container'>
           <button onClick={submit}>Submit</button>
         </div>
-      </div>
-    </div>
+        <div className='signup'> 
+          <p>Create Your Account <strong onClick={handleSignupClick}>signup</strong></p>
+        </div>
+      </div> 
+    </div> 
   );
-}
+};
 
 export default Login;
