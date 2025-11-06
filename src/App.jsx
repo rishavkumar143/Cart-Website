@@ -47,7 +47,7 @@ import Navbar from "./components/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
-import Privacy from "./pages/privacy/Privacy";
+import Privacy from "./pages/Privacy/Privacy";
 import Contact from "./pages/contacts/Contact";
 import Help from "./pages/help/Help";
 import PrivateRoute from "./components/PrivateRoute";
