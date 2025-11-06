@@ -18,6 +18,15 @@ const Navbar = ({ setSearchTerm }) => {
     navigate("/login")
   }
 
+  const handlePrivacy = () =>{
+    navigate("/Privacy")
+  }
+  const handleContact = () =>{
+    navigate("/Contact")
+  }
+  const handleHelp = () =>{
+    navigate("/Help")
+  }
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -32,9 +41,9 @@ const Navbar = ({ setSearchTerm }) => {
 
       <nav>
         <ul className={styles.navLink}>
-          <li>Privacy</li>
-          <li>Contact</li>
-          <li>Help</li>
+          <li onClick={handlePrivacy}>Privacy</li>
+          <li onClick={handleContact}>Contact</li>
+          <li onClick={handleHelp}>Help</li>
           <li className={styles.cartProfile}>
             <MdAddShoppingCart className={styles.icon} />
 
