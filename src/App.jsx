@@ -10,6 +10,8 @@ import Privacy from "./pages/privacy/Privacy";
 import Contact from "./pages/contacts/Contact";
 import Help from "./pages/help/Help";
 import PrivateRoute from "./components/PrivateRoute"; // adjust path
+// import PrivateRoute from "./components/PrivateRoute"; // adjust path
+// import PrivateRoute from "./components/PrivateRoute"; // adjust path
 
 function App() {
 
