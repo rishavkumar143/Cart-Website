@@ -1,4 +1,4 @@
-import "./Privacy.module.css";
+import "./Privacy.css";
 
 const Privacy = () => {
   return (
@@ -61,10 +61,11 @@ const Privacy = () => {
         posted on this page with an updated effective date.
       </p>
 
-      <p className="last-updated">
+      <p className="privacy-policy">
         Last updated: {new Date().toLocaleDateString()}
       </p>
     </div>
   );
 };
+
 export default Privacy;
