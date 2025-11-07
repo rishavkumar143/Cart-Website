@@ -1,4 +1,4 @@
-import "./Privacy.css";
+import "./Privacy.module.css";
 
 const Privacy = () => {
   return (
