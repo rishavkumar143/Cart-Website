@@ -7,6 +7,7 @@ import Privacy from "./pages/privacy/Privacy";
 import Contact from "./pages/contacts/Contact";
 import Help from "./pages/help/Help";
 import PrivateRoute from "./components/PrivateRoute";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/help" element={<Help />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="*" element={<h1>404 Page Not Found</h1>} />
     </Routes>
   );

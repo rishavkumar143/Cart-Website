@@ -11,8 +11,14 @@ function Section() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const [cartCount, setCartCount] = useState(() => {
+    const saved = localStorage.getItem("cartItems");
+    return saved ? JSON.parse(saved).length : 0;
+  });
+
   const itemsPerPage = 30;
 
+  // ✅ Fetch products
   useEffect(() => {
     setLoading(true);
     fetch("https://dummyjson.com/products?limit=190")
@@ -27,10 +33,16 @@ function Section() {
       });
   }, []);
 
+  // ✅ Save cart count whenever it changes
+  useEffect(() => {
+    localStorage.setItem("cartCount", cartCount.toString());
+  }, [cartCount]);
+
   if (loading) {
     return <h2 className={styles.loading}>Loading...</h2>;
   }
 
+  // ✅ Filter, search, and paginate
   const filteredData = data
     .filter((item) =>
       selectedCategory === "all" || !selectedCategory
@@ -55,7 +67,28 @@ function Section() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Limit visible pagination buttons
+  // ✅ Add product to cart (no duplicates)
+  const handleAddToCart = (product) => {
+    const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Avoid duplicates by checking ID
+    const alreadyInCart = existingCart.some((item) => item.id === product.id);
+
+    let updatedCart;
+    if (alreadyInCart) {
+      updatedCart = existingCart.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+    } else {
+      updatedCart = [...existingCart, { ...product, quantity: 1 }];
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    localStorage.setItem("cartCount", updatedCart.length.toString());
+    setCartCount(updatedCart.length);
+  };
+
+  // ✅ Pagination buttons
   const pageNumbers = [];
   const maxVisible = 5;
   const startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
@@ -64,7 +97,7 @@ function Section() {
 
   return (
     <div>
-      <Navbar setSearchTerm={setSearchTerm} />
+      <Navbar setSearchTerm={setSearchTerm} cartCount={cartCount} />
       <Categories setSelectedCategory={setSelectedCategory} />
 
       <div className={styles["main-box"]}>
@@ -104,13 +137,17 @@ function Section() {
                 <strong>Price:</strong> ${item.price}
               </div>
 
-              <button className={styles["cart-btn"]}>Add to Cart</button>
+              <button
+                className={styles["cart-btn"]}
+                onClick={() => handleAddToCart(item)}
+              >
+                Add to Cart
+              </button>
             </div>
           ))
         )}
       </div>
 
-      {/* ✅ Pagination */}
       {totalPages > 1 && (
         <div className={styles.paginationContainer}>
           <button
@@ -120,18 +157,6 @@ function Section() {
           >
             ← Prev
           </button>
-
-          {startPage > 1 && (
-            <>
-              <button
-                className={styles.pageButton}
-                onClick={() => handlePageChange(1)}
-              >
-                1
-              </button>
-              {startPage > 2 && <span className={styles.ellipsis}>...</span>}
-            </>
-          )}
 
           {pageNumbers.map((num) => (
             <button
@@ -144,20 +169,6 @@ function Section() {
               {num}
             </button>
           ))}
-
-          {endPage < totalPages && (
-            <>
-              {endPage < totalPages - 1 && (
-                <span className={styles.ellipsis}>...</span>
-              )}
-              <button
-                className={styles.pageButton}
-                onClick={() => handlePageChange(totalPages)}
-              >
-                {totalPages}
-              </button>
-            </>
-          )}
 
           <button
             className={styles.pageButton}
