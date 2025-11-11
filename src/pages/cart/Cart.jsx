@@ -6,13 +6,11 @@ import Footer from "../../components/footer/Footer";
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
-  // ✅ Load cart items
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
     setCartItems(savedCart);
-  }, []);
+  }, [])
 
-  // ✅ Remove item
   const handleRemove = (id) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
@@ -20,7 +18,6 @@ const Cart = () => {
     localStorage.setItem("cartCount", updatedCart.length.toString());
   };
 
-  // ✅ Increase quantity
   const increaseQty = (id) => {
     const updated = cartItems.map((item) =>
       item.id === id ? { ...item, quantity: item.quantity + 1 } : item
@@ -29,7 +26,6 @@ const Cart = () => {
     localStorage.setItem("cartItems", JSON.stringify(updated));
   };
 
-  // ✅ Decrease quantity
   const decreaseQty = (id) => {
     const updated = cartItems
       .map((item) =>
@@ -42,7 +38,6 @@ const Cart = () => {
     localStorage.setItem("cartItems", JSON.stringify(updated));
   };
 
-  // ✅ Calculate total
   const total = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0

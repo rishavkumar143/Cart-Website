@@ -16,12 +16,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // show a nice confirmation
     alert(
       `✅ Thank you, ${formData.name}! Your message has been sent successfully.`
     );
 
-    // reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -39,7 +37,6 @@ const Contact = () => {
         </p>
 
         <div className={styles.contactContent}>
-          {/* LEFT SIDE — INFO */}
           <div className={styles.contactInfo}>
             <h2>📞 Get in Touch</h2>
             <p>
@@ -57,7 +54,6 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* RIGHT SIDE — FORM */}
           <form className={styles.contactForm} onSubmit={handleSubmit}>
             <h2>📩 Send Us a Message</h2>
 

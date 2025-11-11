@@ -1,7 +1,3 @@
-/* ==============================
-   🛒 CART PAGE STYLES (Polished)
-   ============================== */
-
 .cart-page {
   background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
   min-height: 100vh;
@@ -9,9 +5,6 @@
   flex-direction: column;
 }
 
-/* ------------------------------
-   🧱 Container
-------------------------------- */
 .cart-container {
   max-width: 1100px;
   margin: 50px auto;
@@ -27,9 +20,6 @@
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* ------------------------------
-   🏷️ Title
-------------------------------- */
 .cart-title {
   text-align: center;
   font-size: 2.3rem;
@@ -41,9 +31,6 @@
   padding-bottom: 10px;
 }
 
-/* ------------------------------
-   🚫 Empty State
-------------------------------- */
 .empty-state {
   text-align: center;
   color: #4b5563;
@@ -86,9 +73,6 @@
   transform: translateY(-2px);
 }
 
-/* ------------------------------
-   🧾 Cart Items
-------------------------------- */
 .cart-list {
   display: flex;
   flex-direction: column;
@@ -128,7 +112,6 @@
   justify-content: center;
 }
 
-/* Title + Price */
 .cart-details h3 {
   color: #1f2937;
   font-size: 1.1rem;
@@ -143,7 +126,6 @@
   margin-bottom: 12px;
 }
 
-/* Quantity Buttons */
 .quantity {
   display: flex;
   align-items: center;
@@ -174,7 +156,6 @@
   color: #111827;
 }
 
-/* Subtotal + Remove */
 .subtotal {
   font-size: 0.95rem;
   color: #475569;
@@ -200,9 +181,6 @@
   transform: scale(1.05);
 }
 
-/* ------------------------------
-   💰 Summary Section
-------------------------------- */
 .cart-summary {
   margin-top: 45px;
   text-align: center;
@@ -242,9 +220,6 @@
   transform: translateY(-2px);
 }
 
-/* ------------------------------
-   📱 Responsive Design
-------------------------------- */
 @media (max-width: 768px) {
   .cart-container {
     padding: 25px;

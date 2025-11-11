@@ -1,4 +1,3 @@
-/* Page height management */
 body,
 html {
   height: 100%;
@@ -12,11 +11,10 @@ html {
   flex-direction: column;
 }
 
-/* === Footer Styles === */
 .footer {
   margin-top: auto;
   width: 100%;
-  background-color: #0f172a; /* Dark slate tone matching navbar */
+  background-color: #0f172a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +34,7 @@ html {
 }
 
 .footerLeft h3:hover {
-  color: #38bdf8; /* Soft blue hover */
+  color: #38bdf8;
 }
 
 .footerLeft p {
@@ -64,7 +62,6 @@ html {
   transform: scale(1.05);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;

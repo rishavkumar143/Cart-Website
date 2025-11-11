@@ -21,10 +21,7 @@ const Navbar = ({ setSearchTerm, cartCount = 0 }) => {
   const handleContact = () => navigate("/contact");
   const handleHelp = () => navigate("/help");
 
-  // ✅ Navigate to Cart Page
   const handleCartClick = () => navigate("/cart");
-
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
