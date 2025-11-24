@@ -18,7 +18,6 @@ function Section() {
 
   const itemsPerPage = 30;
 
-  // ✅ Fetch products
   useEffect(() => {
     setLoading(true);
     fetch("https://dummyjson.com/products?limit=190")
@@ -33,7 +32,6 @@ function Section() {
       });
   }, []);
 
-  // ✅ Save cart count whenever it changes
   useEffect(() => {
     localStorage.setItem("cartCount", cartCount.toString());
   }, [cartCount]);
@@ -42,7 +40,6 @@ function Section() {
     return <h2 className={styles.loading}>Loading...</h2>;
   }
 
-  // ✅ Filter, search, and paginate
   const filteredData = data
     .filter((item) =>
       selectedCategory === "all" || !selectedCategory
@@ -67,11 +64,9 @@ function Section() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // ✅ Add product to cart (no duplicates)
   const handleAddToCart = (product) => {
     const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-    // Avoid duplicates by checking ID
     const alreadyInCart = existingCart.some((item) => item.id === product.id);
 
     let updatedCart;
@@ -88,7 +83,6 @@ function Section() {
     setCartCount(updatedCart.length);
   };
 
-  // ✅ Pagination buttons
   const pageNumbers = [];
   const maxVisible = 5;
   const startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
