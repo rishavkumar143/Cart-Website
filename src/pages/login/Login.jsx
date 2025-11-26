@@ -24,10 +24,10 @@ function Login() {
     e.preventDefault();
 
     if (formData.email === user.email && formData.password === user.password) {
-      alert("Login Success ✅");
+      alert("Login Successfull...");
       navigate("/")
     } else {
-      alert("Login Failed ❌");
+      alert("Login Failed...");
     }
   };
 

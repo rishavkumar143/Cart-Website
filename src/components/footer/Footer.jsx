@@ -13,6 +13,8 @@ function Footer() {
 
       <div className={styles.footerRight}>
         <h4>© {new Date().getFullYear()} Cart WebPage. All rights reserved.</h4>
+        <h2>Developed by :- Rishav Kumar</h2>
+        <h3>Email :- rishavkumar27112@gmail.com</h3>
       </div>
     </footer>
   );

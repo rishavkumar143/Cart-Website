@@ -22,10 +22,10 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* .box:hover {
+.box:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-} */
+}
 
 .box img {
   height: 120px;
@@ -47,10 +47,13 @@
 .desc {
   color: #555;
   font-size: 0.9rem;
-  height: 65px;
   line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: auto;
+  max-height: 3.9em;
 }
 
 .box p {
@@ -135,7 +138,6 @@
   }
 }
 
-/* === Pagination Section === */
 .paginationContainer {
   display: flex;
   justify-content: center;

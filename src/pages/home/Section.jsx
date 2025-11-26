@@ -20,7 +20,7 @@ function Section() {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://dummyjson.com/products?limit=190")
+    fetch("https://dummyjson.com/products?limit=194")
       .then((res) => res.json())
       .then((result) => {
         setData(result.products || []);
